@@ -1,0 +1,174 @@
+/* General container styling for the entire page */
+.questions-page {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    width: 100%;
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Header styling for the page title */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Styling for the question container box */
+  .question-container {
+    position: relative;
+    margin: 0 auto; /* Center horizontally */
+    width: 90%; /* Use percentages for responsiveness */
+    max-width: 700px; /* Prevents it from becoming too large */
+    background-color: #fff;
+    padding: 20px; /* Better spacing */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question-container h2 {
+    font-size: 22px; /* Slightly larger for better readability */
+    color: #444;
+    margin: 0 0 15px; /* Added more spacing below the question */
+  }
+  
+  /* Options styling for the choices list */
+  .options-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Added gap for better spacing */
+  }
+  
+  .option-item {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .option-item input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .option-item:hover {
+    background-color: #e6f7ff; /* Light blue hover effect */
+  }
+  
+  /* Styling for navigation buttons */
+  .navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Added gap between buttons */
+    margin-top: 20px;
+  }
+  
+  .nav-button,
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+  }
+  
+  /* Styling for the Previous button */
+  .nav-button {
+    background-color: #007bff; /* Blue background */
+    color: #fff;
+  }
+  
+  .nav-button:disabled {
+    background-color: #ccc; /* Gray background for disabled state */
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  .nav-button:hover:not(:disabled) {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Styling for the Submit button */
+  .submit-button {
+    background-color: #28a745; /* Green background */
+    color: #fff;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  /* Results box for the end of the quiz */
+  .results-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 50px auto;
+  }
+  
+  .results-container h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .results-container p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  /* Score and leaderboard points styling */
+  .score-container,
+  .points-container {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #444;
+    margin-top: 10px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .question-container {
+      width: 95%; /* Increase responsiveness for smaller screens */
+    }
+  
+    .circular-progress-container {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .circular-progress-container .accuracy-text {
+      font-size: 16px;
+    }
+  
+    .results-container {
+      padding: 15px;
+    }
+  
+    .navigation-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .nav-button,
+    .submit-button {
+      width: 100%;
+    }
+  }
+  
